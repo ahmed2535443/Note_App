@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Manager Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 contenteditable="true" onblur="change_title(this)" id="title">My Contacts 📱</h2>
+        
+        <div class="inputs">
+            <input type="text" id="nameInp" placeholder="الاسم">
+            <input type="number" id="phoneInp" placeholder="رقم الهاتف">
+            <select id="catInp">
+                <option value="Family">Family</option>
+                <option value="Work">Work</option>
+                <option value="Friends">Friends</option>
+            </select>
+            <button id="saveBtn">Add Contact</button>
+        </div>
+
+        <div class="controls">
+            <input oninput="searchbyNumorName()" type="text" id="searchInp" placeholder="ابحث بالاسم أو الرقم...">
+            <div class="filters">
+                <button onclick="filterBy('All')">الكل</button>
+                <button onclick="filterBy('Family')">Family</button>
+                <button onclick="filterBy('Work')">Work</button>
+            </div>
+        </div>
+
+        <div id="contactsList"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+:root {
+    --primary-gradient: linear-gradient(135deg, #28a745 0%, #218838 100%);
+    --hover-gradient: linear-gradient(135deg, #2ecc71 0%, #28a745 100%);
+    --bg-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-main: #2c3e50;
+    --accent: #3498db;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+h2 { text-align: center; color: var(--text-main); margin-bottom: 25px; outline: none; }
+
+.inputs { display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px; }
+
+input, select {
+    padding: 14px;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus { border-color: var(--accent); }
+
+/* الزرار الاحترافي اللي طلبته */
+#saveBtn {
+    padding: 15px;
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#saveBtn:hover {
+    background: var(--hover-gradient);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+#saveBtn:active { transform: translateY(1px); }
+
+.controls { border-top: 1px solid #eee; padding-top: 20px; }
+
+#searchInp { width: 100%; margin-bottom: 15px; box-sizing: border-box; background: #f9f9f9; }
+
+.filters { display: flex; gap: 8px; justify-content: center; margin-bottom: 20px; }
+
+.filters button {
+    padding: 6px 18px;
+    border: 2px solid #eee;
+    background: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.filters button:hover { border-color: var(--accent); color: var(--accent); }
+
+#contactsList { display: flex; flex-direction: column; gap: 15px; }
+
+.contact-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    background: #fff;
+    border-radius: 15px;
+    border-left: 5px solid #2ecc71;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.info { display: flex; flex-direction: column; gap: 5px; }
+
+.tag {
+    background: #eef2ff;
+    color: #4f46e5;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+    width: fit-content;
+}
+
+.del-btn {
+    background: #fff5f5;
+    color: #e74c3c;
+    border: 1px solid #fed7d7;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.del-btn:hover { background: #e74c3c; color: white; }
